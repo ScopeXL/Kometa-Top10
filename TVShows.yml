@@ -1,0 +1,138 @@
+##############################################################################
+#                    Streaming Top 10 TV Show Collections                    #
+#                             Created by ScopeXL                             #
+#          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
+##############################################################################
+# Visibility is controlled via template_variables passed from config.yml.
+# TMDb list IDs are public "Top 10" lists maintained by ScopeXL.
+##############################################################################
+
+external_templates:
+  default: templates
+  template_variables:
+    collection_section: "031"
+
+templates:
+  topten:
+    default:
+      key:                    topten
+      style:                  color
+      url_poster_<<key>>:     https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/<<style>>/<<key>>_top_10.jpg
+      sync_mode:              sync
+      collection_order:       custom
+    optional:
+      - tmdb_list
+    tmdb_list:        <<tmdb_list>>
+    url_poster:       <<url_poster_<<key>>>>
+    sync_mode:        <<sync_mode>>
+    collection_order: <<collection_order>>
+
+collections:
+
+  Netflix Top 10 Shows:
+    variables:
+      key:          netflix
+    template:
+      - name:       topten
+        tmdb_list:  8302714
+      - name:       shared
+      - name:       arr
+
+  HBO Max Top 10 Shows:
+    variables:
+      key:          hbo
+    template:
+      - name:       topten
+        tmdb_list:  8302785
+      - name:       shared
+      - name:       arr
+
+  Disney+ Top 10 Shows:
+    variables:
+      key:          disney
+    template:
+      - name:       topten
+        tmdb_list:  8302791
+      - name:       shared
+      - name:       arr
+
+  Prime Video Top 10 Shows:
+    variables:
+      key:          prime
+    template:
+      - name:       topten
+        tmdb_list:  8302793
+      - name:       shared
+      - name:       arr
+
+  Apple TV+ Top 10 Shows:
+    variables:
+      key:          apple
+    template:
+      - name:       topten
+        tmdb_list:  8302795
+      - name:       shared
+      - name:       arr
+
+  Hulu Top 10 Shows:
+    variables:
+      key:          hulu
+    template:
+      - name:       topten
+        tmdb_list:  8302797
+      - name:       shared
+      - name:       arr
+
+  Vudu Top 10 Shows:
+    variables:
+      key:          vudu
+    template:
+      - name:       topten
+        tmdb_list:  8303525
+      - name:       shared
+      - name:       arr
+
+  Google Play Top 10 Shows:
+    variables:
+      key:          google
+    template:
+      - name:       topten
+        tmdb_list:  8303527
+      - name:       shared
+      - name:       arr
+
+  iTunes Top 10 Shows:
+    variables:
+      key:          itunes
+    template:
+      - name:       topten
+        tmdb_list:  8303530
+      - name:       shared
+      - name:       arr
+
+  Starz Top 10 Shows:
+    variables:
+      key:          starz
+    template:
+      - name:       topten
+        tmdb_list:  8303425
+      - name:       shared
+      - name:       arr
+
+  Paramount+ Top 10 Shows:
+    variables:
+      key:          paramount
+    template:
+      - name:       topten
+        tmdb_list:  8303423
+      - name:       shared
+      - name:       arr
+
+  Peacock Top 10 Shows:
+    variables:
+      key:          peacock
+    template:
+      - name:       topten
+        tmdb_list:  8303427
+      - name:       shared
+      - name:       arr
