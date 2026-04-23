@@ -130,8 +130,8 @@ This is one way to configure these collections that will take advantage of many 
 ##############################################################################
 
 # Top 10 Visibility Schedule (Movies & TV Shows) Settings
-x-topten-visibility-settings:
-  &topTenVisibilitySettings # ── Home Screen (Local & Shared Users) ────────────────────────────────────
+x-topten-visibility-settings: &topTenVisibilitySettings
+  # ── Home Screen (Local & Shared Users) ────────────────────────────────────
   visible_home_netflix: weekly(friday|saturday|sunday)
   visible_shared_netflix: weekly(friday|saturday|sunday)
   visible_home_hbo: weekly(thursday|friday|saturday)
