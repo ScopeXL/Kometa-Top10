@@ -17,7 +17,7 @@ templates:
     default:
       key:                    topten
       style:                  color
-      url_poster_<<key>>:     https://raw.githubusercontent.com/Kometa-Team/Default-Images/master/chart/<<style>>/<<key>>_top_10.jpg
+      url_poster_<<key>>:     https://raw.githubusercontent.com/ScopeXL/Kometa-Top10/main/images/chart/<<style>>/<<key>>_top_10.jpg
       sync_mode:              sync
       collection_order:       custom
     optional:
