@@ -65,7 +65,16 @@ collections:
       - name:       shared
       - name:       arr
 
-  Apple TV+ Top 10 Shows:
+  Amazon Top 10 Shows:
+    variables:
+      key:          amazon
+    template:
+      - name:       topten
+        tmdb_list:  8303536
+      - name:       shared
+      - name:       arr
+
+  Apple TV Top 10 Shows:
     variables:
       key:          apple
     template:
@@ -92,18 +101,9 @@ collections:
       - name:       shared
       - name:       arr
 
-  Google Play Top 10 Shows:
+  Apple TV Store Top 10 Shows:
     variables:
-      key:          google
-    template:
-      - name:       topten
-        tmdb_list:  8303527
-      - name:       shared
-      - name:       arr
-
-  iTunes Top 10 Shows:
-    variables:
-      key:          itunes
+      key:          applestore
     template:
       - name:       topten
         tmdb_list:  8303530
