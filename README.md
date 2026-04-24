@@ -132,64 +132,65 @@ This is one way to configure these collections that will take advantage of many 
 # Top 10 Visibility Schedule (Movies & TV Shows) Settings
 x-topten-visibility-settings: &topTenVisibilitySettings
   # ── Home Screen (Local & Shared Users) ────────────────────────────────────
-  visible_home_netflix: weekly(friday|saturday|sunday)
-  visible_shared_netflix: weekly(friday|saturday|sunday)
-  visible_home_hbo: weekly(thursday|friday|saturday)
-  visible_shared_hbo: weekly(thursday|friday|saturday)
-  visible_home_apple: weekly(wednesday|thursday)
-  visible_shared_apple: weekly(wednesday|thursday)
-  visible_home_applestore: weekly(wednesday|thursday)
-  visible_shared_applestore: weekly(wednesday|thursday)
-  visible_home_hulu: weekly(tuesday|wednesday)
-  visible_shared_hulu: weekly(tuesday|wednesday)
-  visible_home_prime: weekly(monday|tuesday)
-  visible_shared_prime: weekly(monday|tuesday)
-  visible_home_amazon: weekly(monday|tuesday)
-  visible_shared_amazon: weekly(monday|tuesday)
-  visible_home_starz: weekly(monday|friday)
-  visible_shared_starz: weekly(monday|friday)
-  visible_home_vudu: weekly(sunday|monday)
-  visible_shared_vudu: weekly(sunday|monday)
-  visible_home_disney: weekly(wednesday|saturday)
-  visible_shared_disney: weekly(wednesday|saturday)
-  visible_home_paramount: weekly(tuesday|thursday)
-  visible_shared_paramount: weekly(tuesday|thursday)
-  visible_home_peacock: weekly(wednesday|sunday)
-  visible_shared_peacock: weekly(wednesday|sunday)
+  visible_home_netflix:         weekly(friday|saturday|sunday)
+  visible_shared_netflix:       weekly(friday|saturday|sunday)
+  visible_home_hbo:             weekly(thursday|friday|saturday)
+  visible_shared_hbo:           weekly(thursday|friday|saturday)
+  visible_home_apple:           weekly(wednesday|thursday)
+  visible_shared_apple:         weekly(wednesday|thursday)
+  visible_home_applestore:      weekly(wednesday|thursday)
+  visible_shared_applestore:    weekly(wednesday|thursday)
+  visible_home_hulu:            weekly(tuesday|wednesday)
+  visible_shared_hulu:          weekly(tuesday|wednesday)
+  visible_home_prime:           weekly(monday|tuesday)
+  visible_shared_prime:         weekly(monday|tuesday)
+  visible_home_amazon:          weekly(monday|tuesday)
+  visible_shared_amazon:        weekly(monday|tuesday)
+  visible_home_starz:           weekly(monday|friday)
+  visible_shared_starz:         weekly(monday|friday)
+  visible_home_vudu:            weekly(sunday|monday)
+  visible_shared_vudu:          weekly(sunday|monday)
+  visible_home_disney:          weekly(wednesday|saturday)
+  visible_shared_disney:        weekly(wednesday|saturday)
+  visible_home_paramount:       weekly(tuesday|thursday)
+  visible_shared_paramount:     weekly(tuesday|thursday)
+  visible_home_peacock:         weekly(wednesday|sunday)
+  visible_shared_peacock:       weekly(wednesday|sunday)
   # ── Library Recommended Tab ───────────────────────────────────────────────
   visible_library_netflix: true
-  visible_library_hbo: weekly(thursday|friday|saturday|sunday)
-  visible_library_apple: weekly(wednesday|thursday|friday|saturday)
-  visible_library_applestore: weekly(wednesday|thursday|friday|saturday)
-  visible_library_hulu: weekly(tuesday|wednesday|thursday|friday)
-  visible_library_prime: weekly(monday|tuesday|wednesday|thursday)
-  visible_library_amazon: weekly(monday|tuesday|wednesday|thursday)
-  visible_library_starz: weekly(monday|wednesday|friday|sunday)
-  visible_library_vudu: weekly(sunday|monday|tuesday|wednesday)
-  visible_library_disney: weekly(tuesday|wednesday|saturday|sunday)
-  visible_library_paramount: weekly(monday|thursday|friday|saturday)
-  visible_library_peacock: weekly(tuesday|wednesday|friday|saturday)
+  visible_library_hbo:          weekly(thursday|friday|saturday|sunday)
+  visible_library_apple:        weekly(wednesday|thursday|friday|saturday)
+  visible_library_applestore:   weekly(wednesday|thursday|friday|saturday)
+  visible_library_hulu:         weekly(tuesday|wednesday|thursday|friday)
+  visible_library_prime:        weekly(monday|tuesday|wednesday|thursday)
+  visible_library_amazon:       weekly(monday|tuesday|wednesday|thursday)
+  visible_library_starz:        weekly(monday|wednesday|friday|sunday)
+  visible_library_vudu:         weekly(sunday|monday|tuesday|wednesday)
+  visible_library_disney:       weekly(tuesday|wednesday|saturday|sunday)
+  visible_library_paramount:    weekly(monday|thursday|friday|saturday)
+  visible_library_peacock:      weekly(tuesday|wednesday|friday|saturday)
 
 # Top 10 Visibility Schedule (Movies Only) Settings
 # These platforms only list their "Top 10" movies
 # only include this in the "Movies" library
 x-topten-visibility-movie-settings: &topTenVisibilityMovieSettings
-  visible_home_pluto: weekly(wednesday|thursday)
-  visible_shared_pluto: weekly(wednesday|thursday)
-  visible_library_pluto: weekly(wednesday|thursday|friday|saturday)
-  visible_home_google: weekly(thursday|friday|saturday)
-  visible_shared_google: weekly(thursday|friday|saturday)
-  visible_library_google: weekly(thursday|friday|saturday|sunday)
+  visible_home_pluto:           weekly(wednesday|thursday)
+  visible_shared_pluto:         weekly(wednesday|thursday)
+  visible_library_pluto:        weekly(wednesday|thursday|friday|saturday)
+  visible_home_google:          weekly(thursday|friday|saturday)
+  visible_shared_google:        weekly(thursday|friday|saturday)
+  visible_library_google:       weekly(thursday|friday|saturday|sunday)
 
 libraries:
   Movies:
     collection_files:
       - url: https://raw.githubusercontent.com/ScopeXL/Kometa-Top10/main/Movies.yml
         template_variables:
-          <<: *topTenVisibilitySettings # use the schedule defined above
-          <<: *topTenVisibilityMovieSettings # include platforms with top 10 movies only
-          radarr_add_missing_netflix: true # add missing movies from Netflix Top 10
-          radarr_search_netflix: true # start a search for the missing movies
+          <<:
+            - *topTenVisibilitySettings       # use the schedule defined above
+            - *topTenVisibilityMovieSettings  # include platforms with top 10 movies only
+          radarr_add_missing_netflix: true    # add missing movies from Netflix Top 10
+          radarr_search_netflix: true         # start a search for the missing movies
 
   TV Shows:
     collection_files:
