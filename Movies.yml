@@ -15,17 +15,18 @@ external_templates:
 templates:
   topten:
     default:
-      key:                    topten
       style:                  color
       url_poster_<<key>>:     https://raw.githubusercontent.com/ScopeXL/Kometa-Top10/main/images/chart/<<style>>/<<key>>_top_10.jpg
       sync_mode:              sync
       collection_order:       custom
+      summary:                "Top 10 Movies streaming on <<key_name>>."
     optional:
       - tmdb_list
     tmdb_list:        <<tmdb_list>>
     url_poster:       <<url_poster_<<key>>>>
     sync_mode:        <<sync_mode>>
     collection_order: <<collection_order>>
+    summary:          <<summary>>
 
 collections:
 
@@ -40,6 +41,7 @@ collections:
   Netflix Top 10 Movies:
     variables:
       key:          netflix
+      key_name:     Netflix
     template:
       - name:       topten
         tmdb_list:  8300585
@@ -49,6 +51,7 @@ collections:
   HBO Max Top 10 Movies:
     variables:
       key:          hbo
+      key_name:     HBO Max
     template:
       - name:       topten
         tmdb_list:  8302784
@@ -58,6 +61,7 @@ collections:
   Disney+ Top 10 Movies:
     variables:
       key:          disney
+      key_name:     Disney+
     template:
       - name:       topten
         tmdb_list:  8302790
@@ -67,6 +71,7 @@ collections:
   Prime Video Top 10 Movies:
     variables:
       key:          prime
+      key_name:     Prime Video
     template:
       - name:       topten
         tmdb_list:  8302792
@@ -76,6 +81,7 @@ collections:
   Amazon Top 10 Movies:
     variables:
       key:          amazon
+      key_name:     Amazon
     template:
       - name:       topten
         tmdb_list:  8303535
@@ -85,6 +91,7 @@ collections:
   Apple TV Top 10 Movies:
     variables:
       key:          apple
+      key_name:     Apple TV
     template:
       - name:       topten
         tmdb_list:  8302794
@@ -94,6 +101,7 @@ collections:
   Hulu Top 10 Movies:
     variables:
       key:          hulu
+      key_name:     Hulu
     template:
       - name:       topten
         tmdb_list:  8302796
@@ -103,6 +111,7 @@ collections:
   Vudu Top 10 Movies:
     variables:
       key:          vudu
+      key_name:     Vudu
     template:
       - name:       topten
         tmdb_list:  8303524
@@ -112,6 +121,7 @@ collections:
   Google Play Top 10 Movies:
     variables:
       key:          google
+      key_name:     Google Play
     template:
       - name:       topten
         tmdb_list:  8303526
@@ -121,6 +131,7 @@ collections:
   Apple TV Store Top 10 Movies:
     variables:
       key:          applestore
+      key_name:     Apple TV Store
     template:
       - name:       topten
         tmdb_list:  8303529
@@ -130,6 +141,7 @@ collections:
   Starz Top 10 Movies:
     variables:
       key:          starz
+      key_name:     Starz
     template:
       - name:       topten
         tmdb_list:  8303424
@@ -139,6 +151,7 @@ collections:
   Paramount+ Top 10 Movies:
     variables:
       key:          paramount
+      key_name:     Paramount+
     template:
       - name:       topten
         tmdb_list:  8303422
@@ -148,6 +161,7 @@ collections:
   Peacock Top 10 Movies:
     variables:
       key:          peacock
+      key_name:     Peacock
     template:
       - name:       topten
         tmdb_list:  8303426
@@ -157,6 +171,7 @@ collections:
   Pluto Top 10 Movies:
     variables:
       key:          pluto
+      key_name:     Pluto
     template:
       - name:       topten
         tmdb_list:  8647373
