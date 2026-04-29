@@ -33,7 +33,7 @@ collections:
     template:
       - name: separator
         separator: top10
-        key_name: Top 10 Streaming
+        key_name: Top 10
         translation_key: separator
     url_poster: https://raw.githubusercontent.com/ScopeXL/Kometa-Top10/main/images/separators/orig/top10.jpg
 

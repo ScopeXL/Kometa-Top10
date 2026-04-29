@@ -29,6 +29,14 @@ templates:
 
 collections:
 
+  Top 10 Collections:
+    template:
+      - name: separator
+        separator: top10
+        key_name: Top 10
+        translation_key: separator
+    url_poster: https://raw.githubusercontent.com/ScopeXL/Kometa-Top10/main/images/separators/orig/top10.jpg
+
   Netflix Top 10 Shows:
     variables:
       key:          netflix
