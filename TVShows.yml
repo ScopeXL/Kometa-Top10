@@ -29,13 +29,6 @@ templates:
 
 collections:
 
-  Top 10 Collections:
-    template:
-      - name: separator
-        separator: orig
-        key_name: Top10
-        translation_key: separator
-
   Netflix Top 10 Shows:
     variables:
       key:          netflix
